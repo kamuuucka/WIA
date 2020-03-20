@@ -1,0 +1,252 @@
+<html>
+<head>
+</head>
+<body>
+<!-- miejsce malowania -->
+<canvas id="can" width="1000" height="400">
+    ...Twoja przegladarka nie wspiera
+    Canvas...
+</canvas>
+
+<script>
+    //wyszukanie canvasa
+    const canvas = document.querySelector("#can");
+    //wybranie kontekstu renderowania (malowania) na 2D
+    const head = canvas.getContext("2d");
+    const eye = canvas.getContext("2d");
+    const devil = canvas.getContext("2d");
+    const horns = canvas.getContext("2d");
+    const clown = canvas.getContext("2d");
+    const smile = canvas.getContext("2d");
+    const brows = canvas.getContext("2d");
+    const glasses = canvas.getContext("2d");
+    const tooth1 = canvas.getContext("2d");
+    const tooth2 = canvas.getContext("2d");
+    const tear = canvas.getContext("2d");
+    const clownEye1 = canvas.getContext("2d");
+    const clownEye2 = canvas.getContext("2d");
+    const clownSmile1 = canvas.getContext("2d");
+    const clownSmile2 = canvas.getContext("2d");
+    const clownNose = canvas.getContext("2d");
+    const clownBrows = canvas.getContext("2d");
+    const clownHair = canvas.getContext("2d");
+    head.lineWidth = 2;
+
+    clownHair.beginPath();
+    clownHair.moveTo(178, 35);
+    clownHair.arc(178, 35, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(175, 35);
+    clownHair.arc(165, 35, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(168, 40);
+    clownHair.arc(158, 40, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(160, 50);
+    clownHair.arc(150, 50, 10, 0, 2 * Math.PI);
+
+    clownHair.moveTo(222, 35);
+    clownHair.arc(222, 35, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(225, 35);
+    clownHair.arc(235, 35, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(232, 40);
+    clownHair.arc(242, 40, 10, 0, 2 * Math.PI);
+    clownHair.moveTo(240, 50);
+    clownHair.arc(250, 50, 10, 0, 2 * Math.PI);
+    clownHair.stroke();
+    clownHair.fillStyle = '#ff3300';
+    clownHair.fill();
+    clownHair.restore();
+
+    //SMILE UPSIDE DOWN
+    head.beginPath();
+    head.arc(75, 75, 50, 0, 2 * Math.PI, true);
+    //SAD
+    head.moveTo(375, 75);
+    head.arc(325, 75, 50, 0, 2 * Math.PI, true);
+    //NERD
+    head.moveTo(500, 75);
+    head.arc(450, 75, 50, 0, 2 * Math.PI, true);
+    head.fillStyle = '#ffcc00';
+    head.fill();
+    head.stroke();
+    head.restore();
+
+    //DEVIL
+    horns.beginPath();
+    horns.moveTo(550, 50);
+    horns.quadraticCurveTo(520, 35, 530, 5);
+    horns.closePath();
+    horns.moveTo(595, 50);
+    horns.quadraticCurveTo(625, 35, 615, 5);
+    horns.closePath();
+    horns.fillStyle = '#9933ff';
+    horns.fill();
+    horns.stroke();
+    horns.restore();
+    devil.beginPath();
+    devil.arc(575, 75, 50, 0, 2 * Math.PI, true);
+    devil.fillStyle = '#9933ff';
+    devil.fill();
+    devil.stroke();
+    devil.restore();
+
+    //CLOWN
+    clown.beginPath();
+    clown.arc(200, 75, 50, 0, 2 * Math.PI, true);
+    clown.fillStyle = '#fdfeed';
+    clown.fill();
+    clown.stroke();
+    clown.restore();
+
+    //SMILE
+    eye.beginPath();
+    eye.arc(60, 90, 5, 0, 2 * Math.PI);
+    eye.moveTo(95, 90);
+    eye.arc(90, 90, 5, 0, 2 * Math.PI);
+    //SAD
+    eye.moveTo(310, 60);
+    eye.arc(310, 60, 5, 0, 2 * Math.PI);
+    eye.moveTo(345, 60);
+    eye.arc(340, 60, 5, 0, 2 * Math.PI);
+    //NERD
+    eye.moveTo(435, 60);
+    eye.arc(435, 60, 5, 0, 2 * Math.PI);
+    eye.moveTo(470, 60);
+    eye.arc(465, 60, 5, 0, 2 * Math.PI);
+    //DEVIL
+    eye.moveTo(560, 60);
+    eye.arc(560, 60, 5, 0, 2 * Math.PI);
+    eye.moveTo(595, 60);
+    eye.arc(590, 60, 5, 0, 2 * Math.PI);
+
+    eye.fillStyle = '#000000';
+    eye.fill();
+    eye.restore();
+
+    tooth1.beginPath();
+    tooth2.beginPath();
+    tooth1.moveTo(444, 100);
+    tooth1.lineTo(444, 105);
+    tooth1.lineTo(449, 105);
+    tooth1.lineTo(449, 100);
+    tooth1.fillStyle = '#ffffff';
+    tooth1.fill();
+    tooth1.restore();
+    tooth2.moveTo(456, 100);
+    tooth2.lineTo(456, 100);
+    tooth2.lineTo(456, 105);
+    tooth2.lineTo(451, 105);
+    tooth2.lineTo(451, 100);
+    tooth2.fillStyle = '#ffffff';
+    tooth2.fill();
+    tooth2.restore();
+
+    //SMILES
+    smile.beginPath();
+    smile.arc(75, 60, 20, Math.PI, 2 * Math.PI);
+    //SAD
+    smile.moveTo(305, 110);
+    smile.arc(325, 110, 20, Math.PI, 2 * Math.PI);
+    //NERD
+    smile.moveTo(430, 100);
+    smile.lineTo(470, 100);
+    //DEVIL
+    smile.moveTo(595, 90);
+    smile.arc(575, 90, 20, 0, Math.PI);
+    smile.stroke();
+    smile.restore();
+
+    //DEVIL BROWS
+    brows.beginPath();
+    eye.moveTo(555, 50);
+    eye.lineTo(570, 60);
+    eye.moveTo(580, 60);
+    eye.lineTo(595, 50);
+    brows.stroke();
+    brows.restore();
+
+    //NERD
+    glasses.beginPath();
+    glasses.moveTo(405, 50);
+    glasses.lineTo(495, 50);
+    glasses.moveTo(425, 50);
+    glasses.lineTo(425, 70);
+    glasses.lineTo(445, 70);
+    glasses.lineTo(445, 50);
+    glasses.moveTo(475, 50);
+    glasses.lineTo(475, 70);
+    glasses.lineTo(455, 70);
+    glasses.lineTo(455, 50);
+    glasses.stroke();
+    glasses.restore();
+
+    tear.beginPath();
+    tear.moveTo(345, 80);
+    tear.arc(340, 80, 5, 0, 2 * Math.PI);
+    tear.moveTo(335, 80);
+    tear.lineTo(340, 70);
+    tear.lineTo(345, 80);
+    tear.fillStyle = '#2d7ed9';
+    tear.fill();
+    tear.strokeStyle = '#2d7ed9';
+    tear.stroke();
+    tear.restore();
+
+    //CLOWN
+    clownEye1.beginPath();
+    clownEye1.moveTo(191, 60);
+    clownEye1.ellipse(185, 60, 6, 9, 0, 0, 2 * Math.PI);
+    clownEye1.moveTo(220, 60);
+    clownEye1.ellipse(214, 60, 6, 9, 0, 0, 2 * Math.PI);
+    clownEye1.fillStyle = '#ffffff';
+    clownEye1.fill();
+    clownEye1.strokeStyle = '#2d7ed9';
+    clownEye1.stroke();
+    clownEye1.restore();
+
+    clownEye2.beginPath();
+    clownEye2.moveTo(187, 60);
+    clownEye2.ellipse(185, 60, 2, 3, 0, 0, 2 * Math.PI);
+    clownEye2.moveTo(216, 60);
+    clownEye2.ellipse(214, 60, 2, 3, 0, 0, 2 * Math.PI);
+    clownEye2.fillStyle = '#000000';
+    clownEye2.fill();
+    clownEye2.strokeStyle = '#000000';
+    clownEye2.stroke();
+    clownEye2.restore();
+
+    clownSmile1.beginPath();
+    clownSmile1.lineWidth = 8;
+    clownSmile1.moveTo(220, 90);
+    clownSmile1.arc(200, 90, 20, 0, Math.PI);
+    clownSmile1.lineCap = 'round';
+    clownSmile1.strokeStyle = '#ff3300';
+    clownSmile1.stroke();
+    clownSmile1.restore();
+
+    clownSmile2.beginPath();
+    clownSmile2.lineWidth = 2;
+    clownSmile2.moveTo(220, 90);
+    clownSmile2.arc(200, 90, 20, 0, Math.PI);
+    clownSmile2.lineCap = 'round';
+    clownSmile2.strokeStyle = '#ffffff';
+    clownSmile2.stroke();
+    clownSmile2.restore();
+
+    clownNose.beginPath();
+    clownNose.arc(200, 78, 8, 0, 2 * Math.PI, true);
+    clownNose.fillStyle = '#ff3300';
+    clownNose.fill();
+    clownNose.restore();
+
+    clownBrows.beginPath();
+    clownBrows.arc(185, 45, 4, Math.PI, 2 * Math.PI);
+    clownBrows.moveTo(210, 45);
+    clownBrows.arc(214, 45, 4, Math.PI, 2 * Math.PI);
+    clownBrows.strokeStyle = '#000000';
+    clownBrows.stroke();
+    clownBrows.restore();
+
+
+</script>
+
+</body>
+</html>
